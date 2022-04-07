@@ -158,14 +158,14 @@ peer lifecycle chaincode querycommitted --channelID $CHANNEL_NAME --name ${CC_NA
 ## TEST1 : Invoking the chaincode
 infoln "TEST1 : Invoking the chaincode"
 set -x
-peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n ${CC_NAME} $PEER_CONN_PARMS -c '{"function":"AddUser","Args":["1023"]}' >&log.txt
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n ${CC_NAME} $PEER_CONN_PARMS -c '{"function":"AddUser","Args":["1023","sienna","register"]}' >&log.txt
 { set +x; } 2>/dev/null
 cat log.txt
 sleep 3
 
 infoln "TEST1 : Invoking the chaincode"
 set -x
-peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n ${CC_NAME} $PEER_CONN_PARMS -c '{"function":"AddContract","Args":["1023","sienna","request","1","testdoc","101011"]}' >&log.txt
+peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n ${CC_NAME} $PEER_CONN_PARMS -c '{"function":"AddContract","Args":["1023","request","1","testdoc","101011"]}' >&log.txt
 { set +x; } 2>/dev/null
 cat log.txt
 sleep 3

@@ -1,1 +1,1 @@
-{"user":"sienna011022@naver.com","average":60,"rates":[{"score":80},{"score":40}]}
+{"Contracts":[{}]}

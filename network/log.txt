@@ -1,1 +1,1 @@
-{"key":"1023","name":"sienna","state":"register","Contracts":[{"docu_id":1,"docu_name":"testdoc","document_hash":"101011"}]}
+{"key":"1023","name_A":"user1","id_number_A":11111,"name_B":"user2","id_number_B":2222,"State":"complete","contract_id":1,"contractHash":"hashahsahs"}
